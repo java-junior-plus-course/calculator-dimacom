@@ -21,11 +21,11 @@ public class Calculator {
         return operandOne - operandTwo;
     }
 
-    public double multi() {
+    public double multiplication() {
         return operandOne * operandTwo;
     }
 
-    public double divvy() {
+    public double division() {
         return operandOne / operandTwo;
     }
 
