@@ -1,47 +1,41 @@
 
 
 public class Calculator {
-    private double operandOne;
-    private double operandTwo;
 
-    public Calculator() {
+    public double add(double... numbers) {
+
+        double numbersResult = 0;
+        for (double tempNumber : numbers) {
+            numbersResult = numbersResult + tempNumber;
+        }
+        return numbersResult;
     }
 
-    public Calculator(double operandOne, double operandTwo) {
-        this.operandOne = operandOne;
-        this.operandTwo = operandTwo;
+    public double minus(double... numbers) {
 
+        double numberResult = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            numberResult = numberResult - numbers[i];
+        }
+        return numberResult;
     }
 
-    public double add() {
-        return operandOne + operandTwo;
+    public double multiplication(double... numbers) {
+
+        double numberResult = 1;
+        for (double tempNumber : numbers) {
+            numberResult = numberResult * tempNumber;
+
+        }
+        return numberResult;
     }
 
-    public double minus() {
-        return operandOne - operandTwo;
+    public double division(double... numbers) {
+        double numberResult = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            numberResult = numberResult / numbers[i];
+        }
+        return numberResult;
     }
 
-    public double multiplication() {
-        return operandOne * operandTwo;
-    }
-
-    public double division() {
-        return operandOne / operandTwo;
-    }
-
-    public double getOperandOne() {
-        return operandOne;
-    }
-
-    public void setOperandOne(double operandOne) {
-        this.operandOne = operandOne;
-    }
-
-    public double getOperandTwo() {
-        return operandTwo;
-    }
-
-    public void setOperandTwo(double operandTwo) {
-        this.operandTwo = operandTwo;
-    }
 }
