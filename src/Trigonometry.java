@@ -1,4 +1,4 @@
-public class Trigonometry extends Calculator {
+public class Trigonometry implements CalculatorTrigonometry {
 
     double operandA;
 
@@ -10,7 +10,22 @@ public class Trigonometry extends Calculator {
         this.operandA = operandA;
     }
 
+    @Override
+    public double cos(double operandA) {
+        return Math.cos(operandA);
+    }
+
+    @Override
     public double sin(double operandA) {
+        return Math.sin(operandA);
+    }
+
+    @Override
+    public double tan(double operandA) {
+        return Math.tan(operandA);
+    }
+
+    /* public double sin(double operandA) {
         return Math.sin(operandA);
     }
 
@@ -29,5 +44,5 @@ public class Trigonometry extends Calculator {
 
     public void setOperandA(double operandA) {
         this.operandA = operandA;
-    }
+    }*/
 }
